@@ -1,5 +1,6 @@
 Supermarket Management System - Employee Module and Integration
 Project Overview
+
 This project represents a comprehensive Supermarket Management System built as an integrated suite of four core modules: Employee Management, Shift Scheduling, Inventory, and Sales/Delivery. Each module handles a specific domain, working together to support full retail operations.
 
 My main responsibility is the Employee Module, which includes the design and implementation of employee lifecycle management, roles, permissions, scheduling constraints, and business logic. Another critical part of my work is the integration layer that connects all four modules, ensuring seamless communication, data consistency, and unified user navigation.
