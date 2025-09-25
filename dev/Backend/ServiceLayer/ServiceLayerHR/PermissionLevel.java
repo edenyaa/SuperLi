@@ -1,0 +1,12 @@
+package Backend.ServiceLayer.ServiceLayerHR;
+
+public enum PermissionLevel {
+    SYSTEMMANAGER,
+    HRMANAGER,
+    TRANSPORTMANAGER,
+    TRANSPORTEMPLOYEE,
+    REGULAREMPLOYEE,
+    WAREHOUSEEMPLOYEE,
+    STOREMANAGER,
+    SUPPLIERMANAGER
+}
