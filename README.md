@@ -1,91 +1,131 @@
-Supermarket Management System - Employee Module and Integration
-Project Overview
+Supermarket Management System
+Employee Module & Integration Project Overview
 
-This project represents a comprehensive Supermarket Management System built as an integrated suite of four core modules: Employee Management, Shift Scheduling, Inventory, and Sales/Delivery. Each module handles a specific domain, working together to support full retail operations.
+This project represents a comprehensive Supermarket Management System built as an integrated suite of four core modules:
 
-My main responsibility is the Employee Module, which includes the design and implementation of employee lifecycle management, roles, permissions, scheduling constraints, and business logic. Another critical part of my work is the integration layer that connects all four modules, ensuring seamless communication, data consistency, and unified user navigation.
+Employee Management
 
-Integration is implemented through a menu-driven interface supporting both a GUI and terminal interface. The terminal accepts arguments to navigate menus and operations, coordinating with GUI to provide a flexible user experience for both scriptable and graphical interaction.
+Shift Scheduling
 
+Inventory
+
+Sales/Delivery
+
+Each module handles a specific domain, working together to support full retail operations.
+
+My Responsibilities
+
+My primary responsibility is the Employee Module, which includes:
+
+Employee lifecycle management
+
+Roles and permissions
+
+Scheduling constraints
+
+Core business logic
+
+I also developed the integration layer that connects all four modules, ensuring:
+
+Seamless communication between modules
+
+Data consistency across the system
+
+Unified user navigation via both CLI and GUI
+
+Architecture & Design
 Object-Oriented Modeling
-Entities are modeled as discrete objects representing domain concepts such as Employees, Shifts, Roles, Constraints, Locations, etc. This clear separation allows for encapsulated, maintainable, and extensible code.
 
-Data Transfer Objects (DTOs) enable clean communication between layers, and Mapper classes translate objects to/from database records. Facades wrap complex subsystems, providing simplified APIs for use by presentation layers.
+Entities modeled as discrete objects: Employees, Shifts, Roles, Constraints, Locations
+
+Provides encapsulation, maintainability, and extensibility
+
+Data Transfer Objects and Mappers
+
+DTOs for communication between layers
+
+Mapper classes for object-relational translation
+
+Facades
+
+Simplified APIs wrapping complex subsystems
+
+Used by presentation layers for easy interaction
 
 Layered Architecture
-The system is organized into these layers for clear separation of concerns:
+Presentation Layer
 
-Presentation Layer:
+GUI: Implemented with Java Swing for interactive management
 
-GUI implemented with Java Swing for interactive management.
+CLI: Terminal interface parses arguments for operations and navigation
 
-Terminal interface parses arguments to drive operations and navigation.
+Business Logic Layer
 
-Business Logic Layer:
+Core rules for employee management, scheduling, constraints, and access control
 
-Core business rules on employee management, scheduling, constraints, and access control encapsulated by Services and Facades.
+Encapsulated in services and facades
 
-Data Access Layer:
+Data Access Layer
 
-DAOs and Repository implementations manage database interactions through JDBC.
+DAOs and repositories manage database interactions via JDBC
 
-Mappers provide object-relational mapping.
+Mappers provide object-relational mapping
 
-Database Layer:
+Database Layer
 
-Relational database storing all persistent data.
+Relational database storing all persistent data
 
-Documentation and Instructions
-Detailed documentation diagrams outlining the layered system architecture and component interactions were created using draw.io tools and are located in the docs folder.
+Documentation
 
-Additionally, a structured menu and comprehensive operational instructions are provided in the INSTRUCTIONS folder inside docs. These text files guide users on how to run the system from terminal commands and GUI, ensuring smooth setup and usage.
+System architecture diagrams created with draw.io, located in /docs
+
+Operational instructions available in /docs/INSTRUCTIONS
+
+Includes guides for running the system via CLI and GUI
 
 Running the Project
 Prerequisites
-Java Development Kit (JDK) 11 or higher
 
-A properly configured relational database compatible with the project's DAO schemas
+Java Development Kit (JDK 11 or higher)
 
-Java build tools (Maven, Gradle) or an IDE capable of compiling and running Java applications
+Configured relational database compatible with the project schemas
+
+Java build tools (Maven, Gradle) or IDE (e.g., IntelliJ, Eclipse)
 
 Running from Terminal (CLI)
-You can run the system from the terminal with the GUI or CLI menu options. The terminal accepts arguments that enable you to navigate directly to specific modules or menus.
 
-There are two main CLI options:
+There are two main options:
 
-Option 1: Launch with specific module menu
-
-bash
+Option 1: Launch with a specific module menu
 java -jar Supermarket.jar CLI StoreManager/HRManager/...
-This runs the terminal interface starting directly at the specified module menu (e.g., StoreManager or HRManager).
+
+
+Starts directly in the specified module menu (e.g., StoreManager, HRManager).
 
 Option 2: Launch default CLI menu
-
-bash
 java -jar Supermarket.jar CLI
-This launches a general CLI menu from which you can navigate to all available modules and submenus.
 
-Both options allow scripted or automated interactions without starting the GUI.
 
-Running the GUI Interface
-You can launch the GUI either from the terminal or directly from an IDE.
+Opens the general CLI menu, allowing navigation to all modules.
 
-Option 1: Launch GUI with specific module menu via terminal
-
-bash
+Running the GUI
+Option 1: Launch GUI with a specific module menu
 java -jar Supermarket.jar GUI StoreManager/HRManager/...
-Opens the GUI starting directly at the specified module's menu.
 
-Option 2: Launch default GUI menu via terminal
-
-bash
+Option 2: Launch default GUI menu
 java -jar Supermarket.jar GUI
-Starts the overall GUI main menu window, from which you can navigate into any module.
 
 Option 3: Launch GUI directly from IDE
-Run the main GUI entry class, such as LoginFrame or MainFrame. After login, navigate through menus for employees, shifts, roles, and constraints with full backend integration.
 
-Notes on Menu Structure
-The system supports opening either a global main menu containing all modules or individual module menus independently, enabling flexible user navigation.
+Run the main GUI entry class (LoginFrame or MainFrame).
+After login, navigate through menus for employees, shifts, roles, and constraints with full backend integration.
 
-The terminal and GUI interfaces are coordinated, reflecting the same menu options and system state for a seamless user experience.
+Menu Structure
+
+The system supports:
+
+Opening a global main menu containing all modules
+
+Opening individual module menus independently
+
+Both CLI and GUI reflect the same menu options and system state for a consistent user experience
